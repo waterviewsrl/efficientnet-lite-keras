@@ -9,9 +9,11 @@ if tf.__version__ < "2.8":  # Keras has been moved to separate repository
 else:
     from keras.applications import imagenet_utils
 
-from tensorflow.python.keras import backend
-from tensorflow.python.keras.utils import layer_utils
+from tensorflow.keras import backend
+#from tensorflow.python.keras.utils import layer_utils
+from keras.utils import layer_utils
 from tensorflow.python.lib.io import file_io
+
 
 DEFAULT_BLOCKS_ARGS = [
     {
