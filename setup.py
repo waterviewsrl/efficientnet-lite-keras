@@ -38,14 +38,14 @@ def _package_exists(name: str) -> bool:
         return True
 
 
-with open("requirements.txt", "r") as f:
+"""with open("requirements.txt", "r") as f:
     content = f.readlines()
     requirements = [
         line
         for line in content
         if not line.startswith(("#", "\n", *IGNORE_REQUIREMENTS))
     ]
-    requirements = _fix_tf_requirement_if_other_installed(requirements)
+    requirements = _fix_tf_requirement_if_other_installed(requirements)"""
 
 
 setup(
@@ -65,5 +65,5 @@ setup(
         "Programming Language :: Python :: 3",
     ],
     packages=["efficientnet_lite"],
-    install_requires=requirements,
+    install_requires=[],
 )
